@@ -33,11 +33,13 @@
 			}
 
 			function justChange() {
-				if( window.outerWidth < 1500 ) {
+				if( window.outerWidth < 800 ) {
 					let images = document.getElementsByTagName("img");
 					console.log(images);
 					images[0].style.height= "350px";
 					images[1].style.height = "350px";
+					document.getElementById("agency").style.height = "450px"
+					document.getElementById("agency").style.width = "100%";
 				}
 			}
 
@@ -46,7 +48,7 @@
 
 	</head>
 
-	<body onload=justChange()>
+	<body onresize=justChange() onload="justChange()">
 		<div class="jumbotron text-center" style="background-color:black; color:white; padding:10px;">
 			<h2>UTT Japan Corporation - Tokyo Japan </h2>
 		</div>
@@ -117,7 +119,7 @@
 			<ul class="list-group">
 				<li class="list-group-item" style="text-align:center"> <h3> Agency In Japan </h3> </li>
 				</ul>
-				<div style="border: 3px solid black; height: 600px; width: 1000px; padding:20;">
+				<div id="agency" style="border: 3px solid black; height: 600px; width: 1000px; padding:20;">
 					<img src = "assets/representation.png" style="height: 450px; width: 100%;" alt="pic loading problem">
 				</div>
 		</div>
