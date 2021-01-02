@@ -31,24 +31,33 @@
 				}
 				all[val].style.display = "block";
 			}
+
+			function justChange() {
+				if( window.outerWidth < 600 ) {
+					let images = document.getElementsByTagName("img");
+					images[0].height = "350px";
+					images[1].height = "350px";
+				}
+			}
+
 		</script>
 			
 
 	</head>
 
-	<body>
+	<body onload=justChange()>
 		<div class="jumbotron text-center" style="background-color:black; color:white; padding:10px;">
 			<h2>UTT Japan Corporation</h2>
 		</div>
 		<br><br>
 		<center>
-		<img src="assets/representation.png" class="img-rounded" alt="Cinque Terre" width="100%" height="500px">
+		<img src="assets/representation.png" class="img-rounded" alt="Cinque Terre" width="100%" height="50px">
 		</center>
 		
 		<br><br>
 		<div class="container" style="width:100%">
 			<center>
-	  		<div class="panel panel-default" style="border:0; width:fit-content; line-height: 15px;">
+	  		<div class="panel panel-default" style="border:0; width:fit-content; height: fit-content;">
 		    	<button onclick="changeContent(0)" type="button" class="btn btn-success">Profile</button>
 				<button onclick="changeContent(1)" type="button" class="btn btn-success">T Uemura Profile</button>
 				<button onclick="changeContent(2)" type="button" class="btn btn-success">Main Customers</button>
