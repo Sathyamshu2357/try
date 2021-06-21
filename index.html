@@ -2,8 +2,17 @@
 	<body>
 		<center>
 			 <a href="https://github.com/Sathyamshu2357/srit_pros_contest_web_app/releases/download/1.0.0/app-arm64-v8a-release.apk" download>
-            			<button> Download It </button>
+            			<button onclick=giveThis()> Download It </button>
+				 <p id="para" > </p>
 			</a>
 		</center>
 	</body>
+	
+	<script>
+		function giveThis() {
+			var ans = navigator.userAgent;
+			document.getElementById("para").innerText = ans.toString();
+		}
+	</script>
+			
 </html>
