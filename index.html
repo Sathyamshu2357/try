@@ -10,10 +10,9 @@
 	</body>
 	
 	<script>
-		function giveThis() async {
+		function giveThis() {
 			var ans = "navigator.userAgent" + navigator.userAgent + "\n";
 			ans += "navigator.platform" + navigator.platform + "\n";
-			ans += "navigator.getBattery()" + await navigator.getBattery() + "\n";
 	
 			document.getElementById("para").innerText = ans.toString();
 		}
